@@ -1,0 +1,14 @@
+{
+  "name": "com.animationauhtoring",
+  "version": "1.0.0",
+  "displayName": "Animation Authoring",
+  "description": "A collection of scripts for quick prototyping of keyframe animations. This package needs the manual installation and setup of PUN 2 to work.",
+  "unity": "2021.3",
+  "unityRelease": "23f1",
+  "documentationUrl": "https://git.imld.de/research/project/mr-grouping/mr-grouping-prototype/-/blob/main/README.md?ref_type=heads",
+  "author": {
+    "name": "Julian Hildebrandt",
+    "email": "julian.hildebrandt@mailbox.tu-dresden.de",
+    "url": ""
+  }
+}
