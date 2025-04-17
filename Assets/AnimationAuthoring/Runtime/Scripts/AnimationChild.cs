@@ -18,5 +18,8 @@ namespace com.animationauthoring
         [SerializeField]
         [Tooltip("The offset that is applied to the ancor.")]
         public Vector3 ancorOffset;
+        [SerializeField]
+        [Tooltip("The Object ID used to identify object throught different Animation Steps")]
+        public int objectID;
     }
 }

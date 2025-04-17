@@ -1,6 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
+using Unity.VisualScripting;
+
 
 namespace com.animationauthoring
 {
@@ -17,6 +20,9 @@ namespace com.animationauthoring
 
             if (triggerScript == null)
             {
+                // Check if we are in prefab mode
+                //if (PrefabStageUtility.GetCurrentPrefabStage() != null)
+
                 MonoBehaviour[] allScripts = FindObjectsOfType<MonoBehaviour>();
                 List<ITriggers> triggerScripts = new List<ITriggers>();
                 for (int i = 0; i < allScripts.Length; i++)
@@ -34,7 +40,16 @@ namespace com.animationauthoring
                 }
                 else
                 {
-                    Debug.LogError("No trigger script found, please make sure one one Gameobject in the Scene holds a script that implements the ITrigger interface");
+                    //could not find trigger script, if we are in prefab mode search for it another way
+                    Sequence seqScript = (Sequence)target;
+                    triggerScript = seqScript.GetComponent<ITriggers>();
+
+                    if (triggerScript == null)
+                    {
+
+                        Debug.LogError("No trigger script found, please make sure one one Gameobject in the Scene holds a script that implements the ITrigger interface. " +
+                            "If you are in Prefab mode make sure a trigger script implementing ITrigger is attached to the Gameobject that the Sequence Script is attached to.");
+                    }
                 }
             }
 
@@ -50,69 +65,85 @@ namespace com.animationauthoring
                 Animation_Step animationStep = script.transform.GetChild(i).GetComponent<Animation_Step>();
                 if (animationStep != null)
                 {
+                    //also attach scripts to children of Start Step
                     AttachScriptToChildren(animationStep.gameObject);
-                    EditorGUILayout.Space(); // Add some spacing between Animation_Step components
-                    EditorGUILayout.LabelField(animationStep.gameObject.name, EditorStyles.boldLabel);
+
+                        EditorGUILayout.Space(); // Add some spacing between Animation_Step components
+                    if (animationStep.gameObject == script.startState)
+                    {
+                           EditorGUILayout.LabelField("Start State (condition to end loop)", EditorStyles.boldLabel);
+                    }
+                    else
+                    {
+                        EditorGUILayout.LabelField(animationStep.gameObject.name, EditorStyles.boldLabel);
+                    }
 
                     // Toggle to show/hide children properties
 
 
 
-
                     EditorGUI.indentLevel++;
-                    SerializedObject animationStepSerializedObject = new SerializedObject(animationStep);
+
+                        SerializedObject animationStepSerializedObject = new SerializedObject(animationStep);
 
 
-                    // Get the list of triggers
-                    List<string> triggers = triggerScript.trigger;
-                    // Find the current index of the trigger
-                    int currentIndex = triggers.IndexOf(animationStep.trigger);
 
-                    if (currentIndex < 0)
-                    {
-                        // The trigger was not found in the list
-                        // Set currentIndex to 0 or display an error message
-                        currentIndex = 0;
-                        Debug.LogWarning("Trigger not found in the list.");
-                    }
+                        // Get the list of triggers
+                        List<string> triggers = triggerScript.trigger;
+                        // Find the current index of the trigger
+                        SerializedProperty triggerProperty = animationStepSerializedObject.FindProperty("trigger");
+                        int currentIndex = triggers.IndexOf(triggerProperty.stringValue);
+                        if (currentIndex < 0)
+                        {
+                            // The trigger was not found in the list
+                            // Set currentIndex to 0 or display an error message
+                            currentIndex = 0;
+                            Debug.LogWarning("Trigger not found in the list.");
+                        }
 
-                    // Display the popup and get the selected index
-                    int selectedIndex = EditorGUILayout.Popup("Trigger", currentIndex, triggers.ToArray());
-
-                    // Check if the list contains any elements and if the selected index is valid
-                    if (triggers.Count > 0 && selectedIndex < triggers.Count)
-                    {
-                        // Assign the selected trigger to the script
-                        animationStep.trigger = triggers[selectedIndex];
-                    }
-                    else
-                    {
-                        // The list is empty or the selected index is invalid
-                        // Display an error message
-                        Debug.LogError("No triggers available or invalid selection.");
-                    }
-
-
-                    SerializedProperty animationStyleProperty = animationStepSerializedObject.FindProperty("animationStyle");
-                    SerializedProperty animationDurationProperty = animationStepSerializedObject.FindProperty("animationDuration");
-                    SerializedProperty doAnimateProperty = animationStepSerializedObject.FindProperty("doAnimate");
-
-                    EditorGUILayout.PropertyField(animationStyleProperty);
-                    EditorGUILayout.PropertyField(animationDurationProperty);
-                    EditorGUILayout.PropertyField(doAnimateProperty);
+                        // Display the popup and get the selected index
+                        int selectedIndex = EditorGUILayout.Popup("Trigger", currentIndex, triggers.ToArray());
+                        // Check if the list contains any elements and if the selected index is valid
+                        if (triggers.Count > 0 && selectedIndex < triggers.Count)
+                        {
+                            // Assign the selected trigger to the script
+                            triggerProperty.stringValue = triggers[selectedIndex];
+                        }
+                        else
+                        {
+                            // The list is empty or the selected index is invalid
+                            // Display an error message
+                            Debug.LogError("No triggers available or invalid selection.");
+                        }
 
 
-                    animationStepSerializedObject.ApplyModifiedProperties();
+                        SerializedProperty animationStyleProperty = animationStepSerializedObject.FindProperty("animationStyle");
+                        SerializedProperty animationDurationProperty = animationStepSerializedObject.FindProperty("animationDuration");
+                        SerializedProperty doAnimateProperty = animationStepSerializedObject.FindProperty("doAnimate");
 
-                    bool showChildrenProperties = GetShowChildrenProperties(animationStep);
-                    showChildrenProperties = EditorGUILayout.Foldout(showChildrenProperties, "Show Individual Object Ancors", true);
-                    SetShowChildrenProperties(animationStep, showChildrenProperties);
-                    if (showChildrenProperties)
-                    {
-                        // Display ancors and ancorOffsets for AnimationChild scripts
-                        DisplayAnimationChildProperties(animationStep);
-                    }
-                    EditorGUI.indentLevel--;
+                        EditorGUILayout.PropertyField(animationStyleProperty);
+                        EditorGUILayout.PropertyField(animationDurationProperty);
+                        EditorGUILayout.PropertyField(doAnimateProperty);
+
+
+                        animationStepSerializedObject.ApplyModifiedProperties();
+
+                        bool showChildrenProperties = GetShowChildrenProperties(animationStep);
+                        showChildrenProperties = EditorGUILayout.Foldout(showChildrenProperties, "Show Individual Object Ancors", true);
+                        SetShowChildrenProperties(animationStep, showChildrenProperties);
+                        if (showChildrenProperties)
+                        {
+                            // Display ancors and ancorOffsets for AnimationChild scripts
+                            DisplayAnimationChildProperties(animationStep);
+                        }
+                        EditorGUI.indentLevel--;
+
+                    
+                }
+                else
+                {
+                    Debug.LogWarning("Animation_Step component not found on child GameObject with the name '"+ script.transform.GetChild(i).name + 
+                        "'. This GameObject will be ignored for animation.");
                 }
             }
 

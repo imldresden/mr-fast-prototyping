@@ -7,6 +7,7 @@ namespace com.animationauthoring
     public class Sequence_Initialize : MonoBehaviour
     {
         private GameObject sceneObjects;
+        private Sequence sequence;
 
         public GameObject Initialize_sceneObjects()
         {
@@ -32,7 +33,7 @@ namespace com.animationauthoring
             AnimationChild[] animationChildren = parent.GetComponentsInChildren<AnimationChild>(true);
             foreach (AnimationChild child in animationChildren)
             {
-                sceneDataObjects.Add(new SceneObjectData(child.gameObject, Ancor.World));
+                sceneDataObjects.Add(new SceneObjectData(child.gameObject, Ancor.World, child.objectID));
             }
 
             // Return the list of GameObjects with AnimationChild script attached
@@ -88,6 +89,7 @@ namespace com.animationauthoring
                 Transform child = parentTransform.GetChild(i);
                 // Instantiate a copy of the child object
                 GameObject sceneObjectCopy = Instantiate(child.gameObject, sceneObjects.transform);
+                
 
                 AssignAnimationScript(sceneObjectCopy.transform);
 
@@ -102,8 +104,11 @@ namespace com.animationauthoring
         {
             // Assign the script to the parent object
             parent.gameObject.AddComponent<Animation>();
-            var syncTransform = parent.gameObject.AddComponent<SyncTransform>();
-            syncTransform.SyncActive = false;
+            sequence = this.transform.GetComponent<Sequence>();
+            if (sequence.networking) {
+                var syncTransform = parent.gameObject.AddComponent<SyncTransform>();
+                syncTransform.SyncActive = false;
+            }
             // We have to also assign AnimationChild on Runtime, as the Start-State Objects dont have it by default
             if (parent.GetComponent<AnimationChild>() == null)
             {

@@ -7,19 +7,11 @@ For an Overview over the final Animation Prefabs look at the last chapter of thi
 
 ## Networking
 
-This project uses the Photon PUN 2 free version for networking. This following section will guide you through setting up networking for this project.
+This project uses Kolibri from HCI Konstanz (https://colibri.hci.uni-konstanz.de) for networking. This project is currently set up to run on the HCI Konstanz main server for testing. This server is public and available under: colibri.hci.uni-konstanz.de. The application name of this project is "MRGroupingPrototype", the exact name is irrelevant as long as it is unique and the same across all clients.
 
-First you need to go to the unity asset store and aquire "PUN 2 - FREE". Next go into the project and click window > Package Manager > Packages: My Assests > PUN 2 - FREE > import. This imports Photon into your project and sets up the "PHOTON_UNITY_NETWORKING" Scripting Define Symbol, this tells the script to use the code with the photon logic. You can double check that this is succesful by going into your Player Settings > Other Settings > Scripting Define Symbols, "PHOTON_UNITY_NETWORKING" as well as other variables for Photon should be here. 
+This project implements a custom network lobby script called the ColibriNetworkManager. This scripts handles creation of a lobby, one or more players joining and assigning an owner.
 
-NOTE: If you want to remove Photon from your version of the project again make sure to also remove "PHOTON_UNITY_NETWORKING" from the Scripting Define Symbols!
-
-Once PUN is installed you will be prompted to setup your project. For this create an free account on the Photon PUN website. With an account create an application in your dashboard and copy the app-id. Navigate to Window->Photon Unity Networking -> Setup Project and paste your app-id. When using one of the premade scenes networking should already function! When creating a new scene ensure that two empty gameobject are present within the scene, one holding Launcher script (Assets -> Scripts -> Networking -> Launcher) and the other holding the GameManager Script (Assets -> Scripts -> Networking -> Launcher). Alternatively there is a "Networking_base" prefab that holds the required objects. 
-
-Note that many prefabs dont have Photon attached to them by  default. For Photon to function attach a PhotonView and a PhotonTransformView to the object holding the sequence script. 
-
-The current networking only synchronizes the position of the prefabs and the sequential animation of the prefabs. 
-
-When opening the application in a scene where networking is set up, the client tries to find a room and join that room, if no room is available under your app-id or all available rooms are full a new room is created. The client that creates the room is the master client and the designated actor. Only this client can control the scene and the animation. All clients that join later only observe the animation but cannot affect it. Currently the room size is set to 6, allowing one actor and five observers, if more observers are required navigate to your scene to the Launcher script and change the Max Players Per Room variable to the desired number. 
+Colibri further allows for hosting networking solutions on private networks for this and further information on Kolibri please read their documentation.
 
 ## Scene Structure
 For tracking objects to the hands of the users we use an Anchor system that relies on certain gameobjects being present in the scene. A preset for a scene-structure can be found in Prefabs > QRCode or QRCode_Networked. Both prefabs have the QR code structure set up to align a scene with a real world Environment. Both Prefabs contain the anchor objects (LeftHandAnchor, RightHandAnchor, BodyAnchor) which are required for the animation to work correctly. 

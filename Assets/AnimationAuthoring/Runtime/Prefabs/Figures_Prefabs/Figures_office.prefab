@@ -58,6 +58,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6609326268846163810}
+  - component: {fileID: 8620399727502753685}
   m_Layer: 0
   m_Name: Start State
   m_TagString: Untagged
@@ -81,6 +82,22 @@ Transform:
   m_Father: {fileID: 6347369967320539310}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8620399727502753685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868939173389468563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: None
+  animationStyle: 0
+  animationDuration: 1
+  doAnimate: 0
 --- !u!1 &1514622940614038539
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +109,7 @@ GameObject:
   - component: {fileID: 6347369967320539310}
   - component: {fileID: 6347369967320539308}
   - component: {fileID: 6347369967320539311}
+  - component: {fileID: 171980261581539084}
   m_Layer: 0
   m_Name: Figures_office
   m_TagString: Untagged
@@ -106,7 +124,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514622940614038539}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.594, y: -0.073, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,7 +138,7 @@ Transform:
   - {fileID: 3260808572727793352}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &6347369967320539308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +155,7 @@ MonoBehaviour:
   endState: {fileID: 705558202901798756}
   keybind: m
   loop: 1
+  networking: 1
 --- !u!114 &6347369967320539311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +168,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9561366fdc7e4a4caf0e593e7d6da8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &171980261581539084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514622940614038539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed75993fb609db44c82a813c03c94ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
+  ModelId: 
+  SyncActive: 1
+  SyncPosition: 1
+  SyncRotation: 1
+  SyncScale: 1
+  UseLocalTransform: 0
+  PhysicsAuthority: 0
+  isKinematic: 0
 --- !u!1 &2636429439492166832
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +353,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808571412028333
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +408,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808571434389505
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +524,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808571525438229
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +537,7 @@ GameObject:
   - component: {fileID: 3260808571525438225}
   - component: {fileID: 3260808571525438224}
   - component: {fileID: 3260808571525438227}
+  - component: {fileID: -806581394392634703}
   m_Layer: 0
   m_Name: Quad 4
   m_TagString: Untagged
@@ -580,6 +624,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-806581394392634703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808571525438229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808571554830607
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +805,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808571604212245
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3260808571604212242}
+  - component: {fileID: 5532408057188113250}
   m_Layer: 0
   m_Name: Group 1
   m_TagString: Untagged
@@ -781,6 +844,23 @@ Transform:
   m_Father: {fileID: 6609326268846163810}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5532408057188113250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808571604212245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808571640295162
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +976,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808571642205587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1092,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808571687652852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1208,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808571741827072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1263,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808571813325197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1276,7 @@ GameObject:
   - component: {fileID: 3260808571813325193}
   - component: {fileID: 3260808571813325192}
   - component: {fileID: 3260808571813325195}
+  - component: {fileID: -5549625355990739044}
   m_Layer: 0
   m_Name: Quad 2
   m_TagString: Untagged
@@ -1278,6 +1363,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-5549625355990739044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808571813325197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808571846739032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1495,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808571874564516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1508,7 @@ GameObject:
   - component: {fileID: 3260808571874564512}
   - component: {fileID: 3260808571874564515}
   - component: {fileID: 3260808571874564514}
+  - component: {fileID: -6399372425213320924}
   m_Layer: 0
   m_Name: Quad 5
   m_TagString: Untagged
@@ -1491,6 +1595,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-6399372425213320924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808571874564516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808571915504232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1727,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808571938541204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1843,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808571981144053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1959,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572020439238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +2075,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808572051578697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,6 +2191,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572059846071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2204,7 @@ GameObject:
   - component: {fileID: 3260808572059846067}
   - component: {fileID: 3260808572059846066}
   - component: {fileID: 3260808572059846069}
+  - component: {fileID: 5924882000794590747}
   m_Layer: 0
   m_Name: Quad 3
   m_TagString: Untagged
@@ -2164,6 +2291,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5924882000794590747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808572059846071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572108633096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2320,7 @@ GameObject:
   - component: {fileID: 3260808572108633108}
   - component: {fileID: 3260808572108633111}
   - component: {fileID: 3260808572108633110}
+  - component: {fileID: 3232362969817316332}
   m_Layer: 0
   m_Name: Quad 1
   m_TagString: Untagged
@@ -2262,6 +2407,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3232362969817316332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808572108633096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808572146278491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,6 +2478,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808572175151862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,6 +2594,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572189510019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2710,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572191770102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,6 +2826,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808572199342229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2942,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808572219398410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +3058,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572230518787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3174,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808572279000816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,6 +3290,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808572283832748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,6 +3406,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572310890727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3351,6 +3522,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572337669030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3577,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808572357348154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,6 +3693,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &3260808572379880292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,6 +3809,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808572392209705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3750,6 +3925,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572411569495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,6 +4041,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572429072306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,6 +4157,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &3260808572636061008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4212,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808572638823325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,6 +4225,7 @@ GameObject:
   - component: {fileID: 3260808572638823321}
   - component: {fileID: 3260808572638823320}
   - component: {fileID: 3260808572638823323}
+  - component: {fileID: -682680131309003849}
   m_Layer: 0
   m_Name: Quad 6
   m_TagString: Untagged
@@ -4132,6 +4312,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-682680131309003849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260808572638823325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808572695687532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,6 +4444,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808572727793355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,6 +4609,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808572748727502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4725,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &3260808572757608989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4641,6 +4841,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &3260808572770528102
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,6 +5006,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808572809337378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,6 +5171,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808573180568544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,6 +5287,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808573236704624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5403,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &3260808573246571218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,6 +5519,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &3260808573262281869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5368,6 +5574,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &3260808573381537250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5483,3 +5690,4 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7

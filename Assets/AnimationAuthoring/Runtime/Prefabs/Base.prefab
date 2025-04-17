@@ -50,6 +50,7 @@ MonoBehaviour:
   endState: {fileID: 6665175806569722590}
   keybind: m
   loop: 1
+  networking: 1
 --- !u!1 &6465696769727770153
 GameObject:
   m_ObjectHideFlags: 0

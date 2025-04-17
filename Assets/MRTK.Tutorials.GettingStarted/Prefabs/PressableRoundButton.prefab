@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4553018781354036778}
   - component: {fileID: 6434527951988969875}
-  - component: {fileID: 8520609111362198630}
   - component: {fileID: 2256845151406054023}
   - component: {fileID: 2897044415607412869}
   m_Layer: 0
@@ -114,14 +113,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &8520609111362198630
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528841229259646152}
-  m_Mesh: {fileID: 0}
 --- !u!222 &2256845151406054023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -172,7 +163,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -184,9 +175,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -436,7 +427,6 @@ GameObject:
   - component: {fileID: 3466374341365966204}
   - component: {fileID: 6293782215702940638}
   - component: {fileID: 5432955146745090935}
-  - component: {fileID: 8594511908354679982}
   m_Layer: 0
   m_Name: PressableRoundButton
   m_TagString: Untagged
@@ -847,28 +837,6 @@ MonoBehaviour:
   localCenter: {x: 0, y: 0, z: -0.0055}
   bounds: {x: 0.032, y: 0.032}
   touchableCollider: {fileID: 6293782215702940611}
---- !u!114 &8594511908354679982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293782215702940639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &6293782216070504610
 GameObject:
   m_ObjectHideFlags: 0

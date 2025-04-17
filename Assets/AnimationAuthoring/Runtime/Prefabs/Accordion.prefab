@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1
+  trigger: None
   animationStyle: 0
   animationDuration: 1
   doAnimate: 1
@@ -163,8 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &983792933231321941
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &1712006172342220519
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,8 +395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &1734752176063716026
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +412,7 @@ GameObject:
   - component: {fileID: 6623469386733769565}
   - component: {fileID: 2149806149331948303}
   - component: {fileID: 8924427787301659092}
+  - component: {fileID: 2450807598449659255}
   m_Layer: 0
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -489,6 +499,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2450807598449659255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734752176063716026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &1807545037815411991
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,8 +627,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &1952923891677763356
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +644,7 @@ GameObject:
   - component: {fileID: 7083320369293951610}
   - component: {fileID: 8273446175582272350}
   - component: {fileID: 4697447618229794870}
+  - component: {fileID: 2634293369671552886}
   m_Layer: 0
   m_Name: Quad (2)
   m_TagString: Untagged
@@ -700,6 +731,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2634293369671552886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952923891677763356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &2086997319257727796
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,8 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &2272566177949564766
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +876,7 @@ GameObject:
   - component: {fileID: 8526650890333639828}
   - component: {fileID: 6978183067304063309}
   - component: {fileID: 5455160200100994266}
+  - component: {fileID: 5930398776961632092}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -911,6 +963,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5930398776961632092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272566177949564766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &2366649756531255543
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1
+  trigger: None
   animationStyle: 0
   animationDuration: 1
   doAnimate: 1
@@ -1074,8 +1143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3208032427589089784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,8 +1259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3214457657793513779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,8 +1375,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3280306222082708535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,8 +1491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3530579607725078417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,8 +1607,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3678484747954754980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,8 +1723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3704197415520038697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1839,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &3958415800705925294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,8 +1955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &5910998709271718382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1
+  trigger: None
   animationStyle: 0
   animationDuration: 1
   doAnimate: 1
@@ -2030,8 +2123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &6115312204149099980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,8 +2239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &6344580371266806582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2256,7 @@ GameObject:
   - component: {fileID: 8210331476585096801}
   - component: {fileID: 2390114138934377915}
   - component: {fileID: 3022765959214468590}
+  - component: {fileID: 8029221501262606021}
   m_Layer: 0
   m_Name: Quad (3)
   m_TagString: Untagged
@@ -2243,6 +2343,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8029221501262606021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344580371266806582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &6448772239654772607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1
+  trigger: None
   animationStyle: 0
   animationDuration: 1
   doAnimate: 1
@@ -2406,8 +2523,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &6823450633998749212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,7 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 1
+  trigger: None
   animationStyle: 0
   animationDuration: 1
   doAnimate: 1
@@ -2571,8 +2691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &7445800795448174947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,8 +2807,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8201294106017699046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,8 +2923,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8270515390393293028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,8 +3039,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8598494981492889592
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,8 +3155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8645116908426360375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3136,8 +3271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8735875194832915099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,8 +3387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1 &8877018035559616943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,8 +3503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 0
 --- !u!1001 &5628991069121251205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3425,10 +3569,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5325019679519226092, guid: 05897de58e07edb4e8a8dd545571920f, type: 3}
       propertyPath: trigger
-      value: 1
+      value: None
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05897de58e07edb4e8a8dd545571920f, type: 3}
+--- !u!1 &1058037362005261876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4661461930940807601, guid: 05897de58e07edb4e8a8dd545571920f, type: 3}
+  m_PrefabInstance: {fileID: 5628991069121251205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6774585632877124072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058037362005261876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9561366fdc7e4a4caf0e593e7d6da8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1065149424617259921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4671950592763462676, guid: 05897de58e07edb4e8a8dd545571920f, type: 3}

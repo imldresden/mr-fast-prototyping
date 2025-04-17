@@ -29,13 +29,6 @@ namespace com.animationauthoring
         [Tooltip("Whether the step should be animated or not")]
         public bool doAnimate = true;
 
-        public Animation_Step(string trigger, AnimationStyle animationStyle, float animationDuration, bool doAnimate)
-        {
-            this.trigger = trigger;
-            this.animationStyle = animationStyle;
-            this.animationDuration = animationDuration;
-            this.doAnimate = doAnimate;
-        }
     }
 }
 

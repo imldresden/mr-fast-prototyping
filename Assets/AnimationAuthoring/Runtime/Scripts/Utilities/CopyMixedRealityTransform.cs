@@ -4,6 +4,9 @@ using Microsoft.MixedReality.Toolkit.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HCIKonstanz.Colibri;
+using HCIKonstanz.Colibri.Networking;
+
 
 namespace com.animationauthoring
 {
@@ -13,6 +16,7 @@ namespace com.animationauthoring
         private Camera mainCamera;
         private MenuManager menuManager;
         private ColibriNetworkManager colibriNetworkManager;
+        private bool startUpdate = false;
 
         void Start()
         {
@@ -27,33 +31,44 @@ namespace com.animationauthoring
             {
                 Debug.LogError("No ColibriNetworkManager found in scene");
             }
+            StartCoroutine(WaitForNetwork());
+        }
+
+        private IEnumerator WaitForNetwork() { 
+            while (!colibriNetworkManager.lobbyJoined)
+            {
+                yield return null;
+            }
+            startUpdate = true;
         }
 
         void Update()
         {
-            if(colibriNetworkManager.self.Id == menuManager.activePlayer)
-            {
-                switch (ancor)
+            if (startUpdate) { 
+                if (colibriNetworkManager.self.Id == menuManager.activePlayer)
                 {
-                    case Ancor.Left_Hand:
-                        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Left, out var palm))
-                        {
-                            transform.position = palm.Position;
-                            //transform.rotation = palm.Rotation; // Copy rotation
-                        }
-                        break;
-                    case Ancor.Right_Hand:
-                        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out palm))
-                        {
-                            transform.position = palm.Position;
-                            //transform.rotation = palm.Rotation; // Copy rotation
-                        }
-                        break;
-                    case Ancor.Body:
-                        transform.position = mainCamera.transform.position;
-                        break;
-                    default:
-                        break;
+                    switch (ancor)
+                    {
+                        case Ancor.Left_Hand:
+                            if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Left, out var palm))
+                            {
+                                transform.position = palm.Position;
+                                transform.rotation = palm.Rotation; // Copy rotation
+                            }
+                            break;
+                        case Ancor.Right_Hand:
+                            if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out palm))
+                            {
+                                transform.position = palm.Position;
+                                transform.rotation = palm.Rotation; // Copy rotation
+                            }
+                            break;
+                        case Ancor.Body:
+                            transform.position = mainCamera.transform.position;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
         }

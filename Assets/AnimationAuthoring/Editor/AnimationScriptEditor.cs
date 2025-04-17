@@ -39,15 +39,22 @@ namespace com.animationauthoring
                 }
                 else
                 {
-                    Debug.LogError("No trigger script found, please make sure one one Gameobject in the Scene holds a script that implements the ITrigger interface");
+                    //find the sequence script by going up the hierarchy
+                    Animation_Step animScript = (Animation_Step)target;
+                    triggerScript = animScript.GetComponentInParent<ITriggers>();
+                    if (triggerScript == null)
+                    {
+                        Debug.LogError("No trigger script found, please make sure one one Gameobject in the Scene holds a script that implements the ITrigger interface");
+                    }
+
                 }
             }
 
             // Get the list of triggers
             List<string> triggers = triggerScript.trigger;
             // Find the current index of the trigger
-            int currentIndex = triggers.IndexOf(script.trigger);
-
+            SerializedProperty triggerProperty = serializedObject.FindProperty("trigger");
+            int currentIndex = triggers.IndexOf(triggerProperty.stringValue);
             if (currentIndex < 0)
             {
                 // The trigger was not found in the list
@@ -63,7 +70,7 @@ namespace com.animationauthoring
             if (triggers.Count > 0 && selectedIndex < triggers.Count)
             {
                 // Assign the selected trigger to the script
-                script.trigger = triggers[selectedIndex];
+                triggerProperty.stringValue = triggers[selectedIndex];
             }
             else
             {
@@ -75,13 +82,6 @@ namespace com.animationauthoring
             EditorGUILayout.PropertyField(serializedObject.FindProperty("animationStyle"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("animationDuration"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("doAnimate"));
-            //EditorGUILayout.PropertyField(serializedObject.FindProperty("ancor"));
-            //check if ancor is either right hand or left hand
-            /*if (script.ancor == Ancor.Right_Hand || script.ancor == Ancor.Left_Hand)
-            {
-                //enable ancorOffset
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("ancorOffset"));
-            }*/
             serializedObject.ApplyModifiedProperties();
             AttachScriptToChildren();
             DisplayAnimationChildProperties(script);
@@ -118,22 +118,25 @@ namespace com.animationauthoring
         private void AttachScriptToChildren()
         {
             Animation_Step animationStep = (Animation_Step)target;
-
+            int id = 1;
             // Iterate through child GameObjects and attach your script if it's not already attached.
             foreach (Transform child in animationStep.transform)
             {
                 if (child.GetComponent<AnimationChild>() == null)
                 {
                     child.gameObject.AddComponent<AnimationChild>();
+                    child.GetComponent<AnimationChild>().objectID = id;
                 }
+                id++;
                 if (child.childCount != 0)
                 {
-                    AttachScriptToChildren(child.gameObject);
+                    var newId = AttachScriptToChildren(child.gameObject, id);
+                    id = newId;
                 }
             }
         }
 
-        private void AttachScriptToChildren(GameObject gameObject)
+        private int AttachScriptToChildren(GameObject gameObject, int id)
         {
             // Iterate through child GameObjects and attach your script if it's not already attached.
             foreach (Transform child in gameObject.transform)
@@ -141,12 +144,16 @@ namespace com.animationauthoring
                 if (child.GetComponent<AnimationChild>() == null)
                 {
                     child.gameObject.AddComponent<AnimationChild>();
+                    child.GetComponent<AnimationChild>().objectID = id;
                 }
+                id++;
                 if (child.childCount != 0)
                 {
-                    AttachScriptToChildren(child.gameObject);
+                    var newId = AttachScriptToChildren(child.gameObject, id);
+                    id = newId;
                 }
             }
+            return id;
         }
     }
 }

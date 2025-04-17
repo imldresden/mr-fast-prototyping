@@ -6,13 +6,15 @@ using System;
 using HCIKonstanz.Colibri.Synchronization;
 using Newtonsoft.Json.Linq;
 using HCIKonstanz.Colibri.Networking;
+
 namespace com.animationauthoring
 { 
 public class ColibriNetworkManager : MonoBehaviour
 {
-    private List<Player> players;
+    public List<Player> players;
     public Player self;
     private Player owner;
+    public bool lobbyJoined = false;
 
     private void Start()
     {
@@ -73,6 +75,7 @@ public class ColibriNetworkManager : MonoBehaviour
 
         Debug.Log("Joined Lobby as " + self.Name);
         Debug.Log("Owner: " + owner.Name);
+            lobbyJoined = true;
     }
     void SortPlayers()
     {

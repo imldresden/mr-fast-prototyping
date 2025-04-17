@@ -12,6 +12,7 @@ namespace com.animationauthoring {
 
             AnimationChild script = (AnimationChild)target;
 
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("objectID"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("ancor"));
 
 

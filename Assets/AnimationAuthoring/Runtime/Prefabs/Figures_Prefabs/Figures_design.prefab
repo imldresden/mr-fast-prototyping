@@ -55,6 +55,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943614914283188
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +171,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943614922804040
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +287,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943614953874268
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +403,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615006611537
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +459,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615035501209
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +575,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615042649285
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +691,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615063076906
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +807,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615067300165
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +923,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615069127450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1039,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615074070858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1155,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615078752230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1271,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615096607835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1387,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615103211105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1503,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615108461689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1668,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615122885514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1784,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615133757738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1840,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615137463700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +1956,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615138412256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2072,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615157070863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,6 +2188,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615164709056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,6 +2304,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615207277734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2469,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615234554823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,6 +2585,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615243156617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,6 +2701,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615263393617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,6 +2757,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615275299804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2873,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615281391440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,6 +2989,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615287733148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,6 +3105,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615300334576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,6 +3221,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615334201139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3337,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615338531260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,6 +3453,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615338752879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,6 +3569,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615341053517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,6 +3685,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615346655064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,6 +3801,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615356144691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +3917,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615373490149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,6 +4033,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615406749346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,6 +4149,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615443472635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,6 +4265,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615466843428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4343,6 +4381,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615471617969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,6 +4497,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615477154493
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4613,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943615485156870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4729,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615495705327
 GameObject:
   m_ObjectHideFlags: 0
@@ -4803,6 +4845,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615509934923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5016,6 +5059,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615536388577
 GameObject:
   m_ObjectHideFlags: 0
@@ -5131,6 +5175,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615539495168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5246,6 +5291,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615557792847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5361,6 +5407,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615572141981
 GameObject:
   m_ObjectHideFlags: 0
@@ -5476,6 +5523,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615580256559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,6 +5688,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615602886395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,6 +5804,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615604329716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,6 +5860,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615618023320
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,6 +5976,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615647682928
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,6 +6092,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615671875967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,6 +6208,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615720825105
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,6 +6324,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615735316598
 GameObject:
   m_ObjectHideFlags: 0
@@ -6385,6 +6440,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615747827630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6440,6 +6496,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615774123398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6555,6 +6612,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615775875489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,6 +6728,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615797946013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +6844,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615817319085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,6 +6960,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615819768467
 GameObject:
   m_ObjectHideFlags: 0
@@ -7015,6 +7076,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615839816352
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,6 +7241,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615858543060
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,6 +7297,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615861567039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7349,6 +7413,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615862568743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,6 +7529,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615873139431
 GameObject:
   m_ObjectHideFlags: 0
@@ -7579,6 +7645,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943615904920600
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,6 +7761,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615912156636
 GameObject:
   m_ObjectHideFlags: 0
@@ -7809,6 +7877,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943615923101265
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,6 +7993,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943615928561642
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,6 +8158,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943615964172466
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,6 +8274,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943615968206061
 GameObject:
   m_ObjectHideFlags: 0
@@ -8258,6 +8330,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943615990436584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8373,6 +8446,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943615994284502
 GameObject:
   m_ObjectHideFlags: 0
@@ -8537,6 +8611,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616018799831
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,6 +8776,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616046969149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8816,6 +8892,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616061549257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8931,6 +9008,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616083998962
 GameObject:
   m_ObjectHideFlags: 0
@@ -9046,6 +9124,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616104881099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,6 +9289,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616136984690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9325,6 +9405,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616176105347
 GameObject:
   m_ObjectHideFlags: 0
@@ -9440,6 +9521,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616181240928
 GameObject:
   m_ObjectHideFlags: 0
@@ -9555,6 +9637,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616183463533
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,6 +9753,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616189382465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9785,6 +9869,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616193317290
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,6 +9985,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616208036455
 GameObject:
   m_ObjectHideFlags: 0
@@ -10015,6 +10101,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616216506295
 GameObject:
   m_ObjectHideFlags: 0
@@ -10024,6 +10111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2642943616216506294}
+  - component: {fileID: 8243214070599909633}
   m_Layer: 0
   m_Name: Group
   m_TagString: Untagged
@@ -10053,6 +10141,23 @@ Transform:
   m_Father: {fileID: 2642943616259259823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8243214070599909633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642943616216506295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1a91dd5e874045a1b8bb66265e6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldPosition: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0, w: 1}
+  ancor: 2
+  ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616224853650
 GameObject:
   m_ObjectHideFlags: 0
@@ -10168,6 +10273,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616258792084
 GameObject:
   m_ObjectHideFlags: 0
@@ -10226,6 +10332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2642943616259259823}
+  - component: {fileID: 1638560764093799964}
   m_Layer: 0
   m_Name: Start State
   m_TagString: Untagged
@@ -10249,6 +10356,22 @@ Transform:
   m_Father: {fileID: 2642943616834899619}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638560764093799964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642943616259259816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ab8d8a17ec7364990db2e93a80edd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: None
+  animationStyle: 0
+  animationDuration: 1
+  doAnimate: 0
 --- !u!1 &2642943616260523288
 GameObject:
   m_ObjectHideFlags: 0
@@ -10364,6 +10487,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616266190688
 GameObject:
   m_ObjectHideFlags: 0
@@ -10479,6 +10603,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616287399433
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,6 +10659,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616308342656
 GameObject:
   m_ObjectHideFlags: 0
@@ -10649,6 +10775,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616313695074
 GameObject:
   m_ObjectHideFlags: 0
@@ -10764,6 +10891,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616330783876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10879,6 +11007,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616376403241
 GameObject:
   m_ObjectHideFlags: 0
@@ -10994,6 +11123,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616388261315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11109,6 +11239,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616402107264
 GameObject:
   m_ObjectHideFlags: 0
@@ -11273,6 +11404,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616457244404
 GameObject:
   m_ObjectHideFlags: 0
@@ -11388,6 +11520,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616460465864
 GameObject:
   m_ObjectHideFlags: 0
@@ -11503,6 +11636,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616461131598
 GameObject:
   m_ObjectHideFlags: 0
@@ -11558,6 +11692,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616473920710
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,6 +11808,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616480374088
 GameObject:
   m_ObjectHideFlags: 0
@@ -11788,6 +11924,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616516936237
 GameObject:
   m_ObjectHideFlags: 0
@@ -11903,6 +12040,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616570943907
 GameObject:
   m_ObjectHideFlags: 0
@@ -12018,6 +12156,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616583035016
 GameObject:
   m_ObjectHideFlags: 0
@@ -12133,6 +12272,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616588379825
 GameObject:
   m_ObjectHideFlags: 0
@@ -12188,6 +12328,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616599043978
 GameObject:
   m_ObjectHideFlags: 0
@@ -12303,6 +12444,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616621049591
 GameObject:
   m_ObjectHideFlags: 0
@@ -12418,6 +12560,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943616689895384
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,6 +12676,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616692348651
 GameObject:
   m_ObjectHideFlags: 0
@@ -12637,6 +12781,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616725061405
 GameObject:
   m_ObjectHideFlags: 0
@@ -12752,6 +12897,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616732411776
 GameObject:
   m_ObjectHideFlags: 0
@@ -12867,6 +13013,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616743731933
 GameObject:
   m_ObjectHideFlags: 0
@@ -12922,6 +13069,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616745260030
 GameObject:
   m_ObjectHideFlags: 0
@@ -13037,6 +13185,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616755793531
 GameObject:
   m_ObjectHideFlags: 0
@@ -13152,6 +13301,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616757784046
 GameObject:
   m_ObjectHideFlags: 0
@@ -13267,6 +13417,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616762271588
 GameObject:
   m_ObjectHideFlags: 0
@@ -13382,6 +13533,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 8
 --- !u!1 &2642943616766336243
 GameObject:
   m_ObjectHideFlags: 0
@@ -13497,6 +13649,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616770473591
 GameObject:
   m_ObjectHideFlags: 0
@@ -13612,6 +13765,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616777038591
 GameObject:
   m_ObjectHideFlags: 0
@@ -13776,6 +13930,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616778805519
 GameObject:
   m_ObjectHideFlags: 0
@@ -13831,6 +13986,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616806525897
 GameObject:
   m_ObjectHideFlags: 0
@@ -13946,6 +14102,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 7
 --- !u!1 &2642943616827280445
 GameObject:
   m_ObjectHideFlags: 0
@@ -14061,6 +14218,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943616834899624
 GameObject:
   m_ObjectHideFlags: 0
@@ -14072,6 +14230,7 @@ GameObject:
   - component: {fileID: 2642943616834899619}
   - component: {fileID: 2642943616834899618}
   - component: {fileID: 2642943616834899631}
+  - component: {fileID: 1841623500786459642}
   m_Layer: 0
   m_Name: Figures_design
   m_TagString: Untagged
@@ -14086,7 +14245,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2642943616834899624}
-  m_LocalRotation: {x: 0.9999997, y: -0, z: -0, w: -0.0007650256}
+  m_LocalRotation: {x: 0.9999997, y: -0, z: -0, w: -0.0007677394}
   m_LocalPosition: {x: 0.58, y: -0.16810507, z: 0.87506485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14127,6 +14286,7 @@ MonoBehaviour:
   endState: {fileID: 2642943615207277734}
   keybind: m
   loop: 1
+  networking: 1
 --- !u!114 &2642943616834899631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14139,6 +14299,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9561366fdc7e4a4caf0e593e7d6da8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1841623500786459642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642943616834899624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed75993fb609db44c82a813c03c94ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
+  ModelId: 
+  SyncActive: 1
+  SyncPosition: 1
+  SyncRotation: 1
+  SyncScale: 1
+  UseLocalTransform: 0
+  PhysicsAuthority: 0
+  isKinematic: 0
 --- !u!1 &2642943616837201994
 GameObject:
   m_ObjectHideFlags: 0
@@ -14254,6 +14435,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616874718703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14369,6 +14551,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 2
 --- !u!1 &2642943616880947995
 GameObject:
   m_ObjectHideFlags: 0
@@ -14484,6 +14667,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616891208907
 GameObject:
   m_ObjectHideFlags: 0
@@ -14599,6 +14783,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943616898226532
 GameObject:
   m_ObjectHideFlags: 0
@@ -14714,6 +14899,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616930310637
 GameObject:
   m_ObjectHideFlags: 0
@@ -14769,6 +14955,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 0
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943616981368183
 GameObject:
   m_ObjectHideFlags: 0
@@ -14884,6 +15071,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 4
 --- !u!1 &2642943616988950293
 GameObject:
   m_ObjectHideFlags: 0
@@ -14999,6 +15187,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943617000330974
 GameObject:
   m_ObjectHideFlags: 0
@@ -15054,6 +15243,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 1
 --- !u!1 &2642943617006306790
 GameObject:
   m_ObjectHideFlags: 0
@@ -15169,6 +15359,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 3
 --- !u!1 &2642943617015693418
 GameObject:
   m_ObjectHideFlags: 0
@@ -15333,6 +15524,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 6
 --- !u!1 &2642943617052365051
 GameObject:
   m_ObjectHideFlags: 0
@@ -15448,6 +15640,7 @@ MonoBehaviour:
   rotationOffset: {x: 0, y: 0, z: 0, w: 1}
   ancor: 2
   ancorOffset: {x: 0, y: 0, z: 0}
+  objectID: 5
 --- !u!1 &2642943617054321523
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,13 @@
 using HCIKonstanz.Colibri.Synchronization;
 using Microsoft.MixedReality.Toolkit.UI;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal.Profiling;
 using UnityEngine;
+using UnityEngine.Networking.Types;
+using static UnityEngine.GraphicsBuffer;
 
 
 namespace com.animationauthoring
@@ -28,6 +32,7 @@ namespace com.animationauthoring
         public bool loop = true;
 
 
+        private List<Vector3> worldPositions = new List<Vector3>();
 
         // internal variables used for handling animation
         private GameObject sceneObjects;
@@ -41,7 +46,9 @@ namespace com.animationauthoring
         //Dictionary of Gameobjects and Animation
         private Dictionary<Animation, GameObject> transformParentDict = new Dictionary<Animation, GameObject>();
         private ColibriNetworkManager networkLobby;
+        public bool networking = true;
         ITriggers triggers;
+
 
         Sequence_Initialize sequenceInitialize;
 
@@ -75,6 +82,11 @@ namespace com.animationauthoring
             }
 
             networkLobby = FindObjectOfType<ColibriNetworkManager>();
+            if (networkLobby == null)
+            {
+                networking = false;
+                Debug.LogWarning("No ColibriNetworkManager found in the scene. Sequence is started without networking");
+            }
 
             //SetupRPCListeners();
             Initialize();
@@ -84,12 +96,14 @@ namespace com.animationauthoring
         private void OnEnable()
         {
             // Register the RPC listeners
-            SetupRPCListeners();
+            if (networking)
+                SetupRPCListeners();
         }
         private void OnDisable()
         {
             // Unregister the RPC listeners
-            RemoveListeners();
+            if (networking)
+                RemoveListeners();
         }
 
         public void SetupRPCListeners()
@@ -137,6 +151,9 @@ namespace com.animationauthoring
         /// </summary>
         public void Initialize()
         {
+
+            CheckAnimationSteps();
+
             sceneObjects = sequenceInitialize.Initialize_sceneObjects();
 
             // Deactivate all objects in the prefab
@@ -153,11 +170,26 @@ namespace com.animationauthoring
 
             sceneObjects.AddComponent<ObjectManipulator>();
         }
-
         /// <summary>
-        /// Update method is used to check if the key is pressed and if so, it will stop or resume the animation sequence
+        /// Checks animationsteps localposition for unexpected behaviour and issues a warning if unexpected behavior could occur
         /// </summary>
-        private void Update()
+        private void CheckAnimationSteps()
+        {
+            //check if one or more animation steps has a world position other than (0,0,0)
+            Animation_Step[] foundObjects = GetComponentsInChildren<Animation_Step>();
+            foreach (Animation_Step obj in foundObjects)
+            {
+                if (obj.gameObject.transform.localPosition != Vector3.zero)
+                {
+                    Debug.LogWarning("Animation Step " + obj.gameObject.name + " has a world position other than (0,0,0). This might cause unexpected behaviour within the animation. " +
+                        "To normalize the animationstep position use Tools > NormalizeAnimationSteps");
+                }
+            }
+        }
+            /// <summary>
+            /// Update method is used to check if the key is pressed and if so, it will stop or resume the animation sequence
+            /// </summary>
+            private void Update()
         {
             if (Input.GetKey(keybind))
             {
@@ -175,8 +207,6 @@ namespace com.animationauthoring
 
 
         }
-
-
         /// <summary>
         /// Function called by networking to synchronize the Sequence function;
         /// </summary>
@@ -198,13 +228,13 @@ namespace com.animationauthoring
             while (loop || firstLoop)
             {
                 if (!firstLoop)
-                {
-                    yield return StartCoroutine(RecreateStartState());
+                { 
+                    RecreateStartState();
                 }
 
                 foreach (Animation_Step obj in foundObjects)
                 {
-                    if ((obj.gameObject != endState) && (obj.doAnimate))
+                    if ((obj.gameObject != endState) && (obj.gameObject != startState) && (obj.doAnimate))
                     {
                         yield return StartCoroutine(AnimateObject(obj));
                     }
@@ -214,7 +244,17 @@ namespace com.animationauthoring
                 {
                     yield return StartCoroutine(AnimateObject(endState.GetComponent<Animation_Step>()));
                 }
-
+                if (startState.GetComponent<Animation_Step>() != null)
+                { 
+                    if (startState.GetComponent<Animation_Step>().doAnimate)
+                    {
+                        yield return StartCoroutine(AnimateObject(startState.GetComponent<Animation_Step>()));
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Start State does not have an Animation_Step component attached");
+                }
                 firstLoop = false;
                 if (loop)
                 {
@@ -226,12 +266,23 @@ namespace com.animationauthoring
         /// Recreates start state for the actor case
         /// </summary>
         /// <returns></returns>
-        private IEnumerator RecreateStartState()
+        private void RecreateStartState()
         {
-            animationsRunning = 0;
+            for (int i = sceneDataObjects.Count - 1; i >= 0; i--)
+            {
+                GameObject.Destroy(sceneDataObjects[i].gameObj);
+            }
+            Debug.Log("Copied Start State");
+            GameObject.Destroy(sceneObjects);
+            sceneObjects = sequenceInitialize.Initialize_sceneObjects();
+            // Debug log the children Gameobjects in sceneObjects
+            Transform[] temp = sceneObjects.GetComponentsInChildren<Transform>();
+            sequenceInitialize.FetchAndCopyChildren(startState);
+            sceneDataObjects = sequenceInitialize.FindAnimationChildObjects(sceneObjects);
+            /*animationsRunning = 0;
             MoveChildrenRecursively(startState.transform, FetchStateChildTransforms(startState), endState.GetComponent<Animation_Step>());
             yield return StartCoroutine(WaitForAnimationsToComplete());
-            Debug.Log("Recreated Start State");
+            Debug.Log("Recreated Start State");*/
         }
 
 
@@ -258,21 +309,20 @@ namespace com.animationauthoring
         /// <returns></returns>
         private IEnumerator AnimateObject(Animation_Step obj)
         {
-            if (networkLobby.IsOwner)
-            {
-                observerCanContinue = false;
-                yield return StartCoroutine(WaitForTriggerNetworked(obj.trigger));
-                //if observercancontinue is false (i.e. we had a succesful trigger), we need to send a signal to the observer that we are done
-                if (observerCanContinue == false)
-                {
-                    Sync.Send("CanObserverContinue", true);
-                }
+            if (networking) { 
+                    observerCanContinue = false;
+                    yield return StartCoroutine(WaitForTriggerNetworked(obj.trigger));
+                    //if observercancontinue is false (i.e. we had a succesful trigger), we need to send a signal to the observer that we are done
+                    if (observerCanContinue == false && networking)
+                    {
+                        Sync.Send("CanObserverContinue", true);
+                    }
             }
+            //no networking path
             else
             {
-                yield return StartCoroutine(WaitForActor());
+                yield return StartCoroutine(WaitForTrigger(obj.trigger));
             }
-
             //Debug.Log("Animating: " + obj.gameObject.name);
             yield return StartCoroutine(FetchAndMoveChildren(obj.gameObject));
         }
@@ -307,6 +357,18 @@ namespace com.animationauthoring
             }
         }
 
+        private IEnumerator WaitForTrigger(String trigger)
+        {
+            while (true)
+            {
+                if (triggers.EvalAndCallTrigger(trigger))
+                {
+                    break;
+                }
+                yield return null;
+            }
+        }
+
         /// <summary>
         /// Wait for all animations to complete
         /// </summary>
@@ -332,10 +394,7 @@ namespace com.animationauthoring
                 yield return null;
             }
 
-            Transform sceneObjectsTransform = sceneObjects.transform;
-
             // Fetch transforms from given parent state
-            List<Transform> childTransforms = FetchStateChildTransforms(parent);
             Animation_Step animationStep = parent.GetComponent<Animation_Step>();
 
             if (animationStep == null)
@@ -346,9 +405,6 @@ namespace com.animationauthoring
             animationsRunning = 0;
 
             MoveChildrenIteratively(parent, animationStep);
-
-
-
 
             // Wait for all animations to complete
             while (animationsRunning > 0)
@@ -365,11 +421,6 @@ namespace com.animationauthoring
         /// <param name="animationStep">The Animation_Step data used for animations.</param>
         private void MoveChildrenIteratively(GameObject targetParent, Animation_Step animationStep)
         {
-            if (sceneDataObjects.Count == 0)
-            {
-                Debug.LogError("sceneDataObjects is empty when trying to move Children!");
-                return;
-            }
             List<SceneObjectData> targetChildren = sequenceInitialize.FindAnimationChildObjects(targetParent);
 
             List<Transform> childTransforms = new List<Transform>();
@@ -379,20 +430,36 @@ namespace com.animationauthoring
                 childTransforms.Add(childTransform.gameObj.transform);
             }
 
-            //Debug.Log("Called with parent " + parent.gameObject.name);
+            //Go through children in the current animation step
             for (int i = 0; i < sceneDataObjects.Count; i++)
             {
-                Transform child = sceneDataObjects[i].gameObj.transform;
+                SceneObjectData currentSceneObjectData = sceneDataObjects[i];
+                Transform child = currentSceneObjectData.gameObj.transform;
                 Animation animation = child.GetComponent<Animation>();
-
+                //find the target object in childtransforms that has the same objectID as the current object
                 if (animation != null)
                 {
-                    if (childTransforms.Count > i)
+                    AnimationChild current = child.GetComponent<AnimationChild>();
+                    //find the target object in childtransforms that has the same objectID as the current object
+                    AnimationChild target = null;
+                    for (int j = 0; j < childTransforms.Count; j++)
                     {
-                        AnimationChild current = child.GetComponent<AnimationChild>();
-                        AnimationChild target = childTransforms[i].GetComponent<AnimationChild>();
-                        // Increment the counter before starting the animation
-                        animationsRunning++;
+                        if (childTransforms[j].GetComponent<AnimationChild>().objectID == currentSceneObjectData.id)
+                        {
+                            target = childTransforms[j].GetComponent<AnimationChild>();
+                            break;
+                        }
+                    }                    
+                    //if we cant find a target delete the object 
+                    if (target == null)
+                    {
+                        sceneDataObjects.Remove(currentSceneObjectData);
+                        GameObject.Destroy(current.gameObject);      
+                        Debug.Log("Deleted object with ID: " + currentSceneObjectData.id);
+                    }
+                    else { 
+                    // Increment the counter before starting the animation
+                    animationsRunning++;
                         // Start the animation coroutine
                         //only move object if it should be moved, i.e. if the ancor is world, if the ancor is something else it is being tracked
                         if (current.ancor != target.ancor && current.ancor == Ancor.World)
@@ -403,29 +470,47 @@ namespace com.animationauthoring
                         else if (current.ancor != target.ancor && target.ancor == Ancor.World)
                         {
                             //Tracked To World
-                            //Debug.Log("Tracked to World");
                             AnimateTrackedToWorld(child, current, target, animationStep, childTransforms[i], animation);
                         }
                         else if (current.ancor == Ancor.World)
                         {
                             //World to World
-                            //Debug.Log("World to World");
                             StartCoroutine(AnimateWorldToWorld(child, current, target, animationStep, childTransforms[i], animation));
                         }
                         else
                         {
-                            //Debug.Log("Tracked to Tracked");
                             animationsRunning--;
                         }
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Not enough transforms in 'End State' to match the number of children in 'Start State'.");
                     }
                 }
                 else
                 {
                     Debug.LogWarning("Animation_Step component is missing on a child object.");
+                }
+       
+            }
+            //create the new objects that first appear in this animation step, do this at the end, they do not need to be animated
+            for (int i = 0; i < childTransforms.Count; i++)
+            {
+                AnimationChild target = childTransforms[i].GetComponent<AnimationChild>();
+                SceneObjectData currentSceneObject = null;
+                bool found = false;
+                foreach (SceneObjectData sceneObject in sceneDataObjects)
+                {
+                    if (sceneObject.id == target.objectID) {
+                        currentSceneObject = sceneObject;
+                        found = true;
+                    }
+                }
+                //SceneObjectData currentSceneObject = sceneDataObjects.Find(x => x.id == target.objectID);
+                //if null then the target object id is not present in sceneObjects, hence we have to create it
+                if (!found)
+                {
+                    //create new object at the position of the target object
+                    var newObject = GameObject.Instantiate(childTransforms[i].gameObject, sceneObjects.transform);
+                    new SceneObjectData(newObject, target.ancor, target.objectID);
+                    newObject.SetActive(true);
+                    sceneDataObjects.Add(new SceneObjectData(newObject, target.ancor, target.objectID));
                 }
             }
         }
@@ -533,6 +618,8 @@ namespace com.animationauthoring
             StartCoroutine(AnimateAndDecrementCoroutine(animation, targetLocalPosition, targetLocalRotation, targetLocalScale, animationStep.animationDuration, animationStep.animationStyle, AncorChange.WorldToTracked, target.ancor));
             child.GetComponent<SyncTransform>().SyncActive = true;
             yield return null;
+            //sync newly created parent object via networking
+
         }
 
         private void AnimateTrackedToWorld(Transform child, AnimationChild current, AnimationChild target, Animation_Step animationStep, Transform childTransform, Animation animation)
@@ -588,11 +675,45 @@ namespace com.animationauthoring
                         parent.transform.position = sceneObjects.transform.position;
                         parent.transform.rotation = sceneObjects.transform.rotation;
                         parent.transform.localScale = sceneObjects.transform.localScale;
+
                     }
                     parent.transform.SetParent(AnchorManager.Instance.AnchorToTransform(trackedAncor), true);
+                    //if active player and other players present wait for other players to arrive here
+                    MenuManager menuManager = FindObjectOfType<MenuManager>();
+                    ColibriNetworkManager colibriNetworkManager = FindObjectOfType<ColibriNetworkManager>();
+                    if (menuManager.activePlayer == colibriNetworkManager.self.Id)
+                    {
+                        //be ready to send parent transform data (localposition!) to other players once they arrived
+                        Sync.Receive("RequestParentTransform", (bool send) => {
+                            Sync.Send("AnswerParentTransform", new JObject
+                            {
+                                { "localposX", parent.transform.localPosition.x },
+                                { "localposY", parent.transform.localPosition.y },
+                                { "localposZ", parent.transform.localPosition.z },
+                                { "localrotX", parent.transform.localRotation.x },
+                                { "localrotY", parent.transform.localRotation.y },
+                                { "localrotZ", parent.transform.localRotation.z },
+                                { "localrotW", parent.transform.localRotation.w },
+                                { "localscaleX", parent.transform.localScale.x },
+                                { "localscaleY", parent.transform.localScale.y },
+                                { "localscaleZ", parent.transform.localScale.z }
+                            });
+                        });
+                    }
+                    else
+                    {
+                        //if not active player, query active player to send parent transform data
+                        //on receive parent transform data, set parent transform to received data
+                        Sync.Receive("AnswerParentTransform", (JToken obj) => {
+                            parent.transform.localPosition = new Vector3(obj["localposX"].Value<float>(), obj["localposY"].Value<float>(), obj["localposZ"].Value<float>());
+                            parent.transform.localRotation = new Quaternion(obj["localrotX"].Value<float>(), obj["localrotY"].Value<float>(), obj["localrotZ"].Value<float>(), obj["localrotW"].Value<float>());
+                            parent.transform.localScale = new Vector3(obj["localscaleX"].Value<float>(), obj["localscaleY"].Value<float>(), obj["localscaleZ"].Value<float>());
+                            });
+                        Sync.Send("RequestParentTransform", true);
+
+                    }
                     animation.transform.SetParent(parent.transform, true);
 
-                    //Debug.Log("Succesfully changed my parent to: " + animation.gameObject.transform.parent.gameObject.name);
                     break;
                 case AncorChange.TrackedToWorld:
                     //sceneObjects.transform.parent = this.transform;
