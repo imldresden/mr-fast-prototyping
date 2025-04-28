@@ -60,8 +60,8 @@ This property provides a slider to adjust the overall duration of an animation s
 #### Do Animate
 You can deactivate an animation step by toggling the "Do Animate" property. This allows you to experiment with different animation variations within a single prefab.
 
-### Ancor
-Each Object contained within an animation step has an ancor property. All of these ancors can bee seen in the inspector view of an animation step, by expanding the ancor section.  There are currently three choices for ancors, Left Hand, Right Hand and World. The origin of an prefab is tracked to either the left or right hand palm. Grouping animation objects in empty gameobjects allows for tracking of specifically arranged object groups to a tracked ancor as can be seen in the "Crashing" Prefab. 
+### anchor
+Each Object contained within an animation step has an anchor property. All of these anchors can bee seen in the inspector view of an animation step, by expanding the anchor section.  There are currently three choices for anchors, Left Hand, Right Hand and World. The origin of an prefab is tracked to either the left or right hand palm. Grouping animation objects in empty gameobjects allows for tracking of specifically arranged object groups to a tracked anchor as can be seen in the "Crashing" Prefab. 
 
 Generally it is recommended to have a group-object which is just an empty game object to hold all the gameobjects that will be tracked to an anchor and have that group-object switch its anchor and not the child objects. This is because once a object is tracked to an anchor like the left hand it wont perform animation, by appending the group object to the anchor the children can still perform their relative animation.
 
